@@ -45,5 +45,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+        hockeyapp.start(null, null, "c2bfbc3f5e844763b0a542fe28803efb");
+        hockeyapp.forceCrash();
+        hockeyapp.feedback();
+        hockeyapp.checkForUpdate();
     }
 };
