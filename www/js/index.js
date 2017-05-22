@@ -47,8 +47,14 @@ var app = {
         console.log('Received Event: ' + id);
 
         hockeyapp.start(null, null, "c2bfbc3f5e844763b0a542fe28803efb");
+        hockeyapp.saveException(
+            function() { alert('hockeyapp saveException'); },
+            function(msg) { alert(msg); },
+            'Something wrong has happened: bla bla bla...');
+
         hockeyapp.forceCrash();
         hockeyapp.feedback();
         hockeyapp.checkForUpdate();
     }
 };
+app.initialize();
